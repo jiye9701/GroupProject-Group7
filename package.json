@@ -10,6 +10,7 @@
     "npm": "^6.0.0"
   },
   "dependencies": {
+    "@angular/cli": "^10.2.0",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.2",
     "connect-flash": "^0.1.1",
