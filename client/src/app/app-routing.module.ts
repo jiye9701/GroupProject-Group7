@@ -7,11 +7,11 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ServicesComponent } from './pages/services/services.component';
 
 const routes: Routes = [
-  {path: 'home', component : HomeComponent},
-  {path: 'about', component : AboutComponent},
-  {path: 'products', component : ProductsComponent},
-  {path: 'services', component : ServicesComponent},
-  {path: 'contact', component : ContactComponent},
+  {path: 'home', component : HomeComponent, data: {title: 'Home'}},
+  {path: 'about', component : AboutComponent, data: {title: 'About'}},
+  {path: 'products', component : ProductsComponent, data: {title: 'Products'}},
+  {path: 'services', component : ServicesComponent, data: {title: 'Services'}},
+  {path: 'contact', component : ContactComponent, data: {title: 'Contact'}},
   {path: '', redirectTo : '/home', pathMatch:'full'},
 ];
 
