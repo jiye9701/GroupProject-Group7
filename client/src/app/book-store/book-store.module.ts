@@ -9,6 +9,6 @@ import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 @NgModule({
     imports: [ModelModule, BrowserModule, FormsModule],
     declarations: [BookStoreComponent, CounterDirective, CartSummaryComponent],
-    exports: [BookStoreComponent, CounterDirective]
+    exports: [BookStoreComponent, CounterDirective, CartSummaryComponent]
 })
 export class BookStoreModule {}
