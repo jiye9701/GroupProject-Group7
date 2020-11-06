@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Book } from '../model/book.model'; //
-import { BookRepository } from './../model/book.repository'; //
+import { Book } from '../model/book.model'; 
+import { BookRepository } from './../model/book.repository'; 
 
 @Component({
   selector: 'app-book-store',
@@ -9,17 +9,22 @@ import { BookRepository } from './../model/book.repository'; //
 })
 export class BookStoreComponent
 {
+  public selectedAuthor = null; //
 
-  constructor(private repository: BookRepository) { } //
+  constructor(private repository: BookRepository) { } 
 
-
-  get books(): Book[] //
+  get books(): Book[] 
   {
-    return this.repository.getBooks();
+    return this.repository.getBooks(this.selectedAuthor); //
   }
 
-  get authors(): string[] //
+  get authors(): string[] 
   {
     return this.repository.getAuthors();
+  }
+
+  changeAuthor(newAuthor?: string):void //
+  {
+    this.selectedAuthor=newAuthor;
   }
 }

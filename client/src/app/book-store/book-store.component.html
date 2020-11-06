@@ -1,8 +1,17 @@
 <div class="container">
     <div class="row">
-        <div class="col-3 bg-info p-2 text-white">
-            {{ authors.length }} Authors
+        <div class="col-3 p-2 text-white">
+            <button class="btn btn-block btn-outline-primary" (click)='changeAuthor()'>
+                All Authors
+            </button>
+            <button *ngFor='let author of authors'
+            class="btn btn-outline-primary btn-block"
+            [class.active] = 'author == selectedAuthor' (click)='changeAuthor(author)'>
+            {{ author }}
+            </button>
+            <!-- {{ authors.length }} Authors --> 
         </div>
+
         <div class="col-9 p-2">
             <div *ngFor= 'let book of books' class="card m-1 p-1 bg-dark text-light">
                 <h4>
