@@ -1,1 +1,16 @@
-<p>cart-summary works!</p>
+<div class="float-right">
+    <small>
+        Your Cart : 
+        <span *ngIf='cart.itemCount > 0'>
+            {{ cart.itemCount }} item(s)
+            {{ cart.carPrice | currency: 'USD': 'symbol':'2.2-2' }}
+        </span>
+        <span *ngIf='cart.itemCount == 0'> 
+            (empty)
+        </span>
+        <button class="btn btn-sm bg-dark text-white"
+        [disabled]='cart.itemCount == 0'>
+            <i class="class fa fa-shopping-cart"></i>
+        </button>
+    </small>
+</div>
