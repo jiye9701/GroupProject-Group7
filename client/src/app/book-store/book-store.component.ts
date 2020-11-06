@@ -10,7 +10,7 @@ import { BookRepository } from './../model/book.repository';
 export class BookStoreComponent
 {
   public selectedAuthor = null; 
-  public booksPerPage = 4; //
+  public booksPerPage = 3; //
   public selectedPage = 1; //
 
   constructor(private repository: BookRepository) { } 
