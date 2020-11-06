@@ -43,12 +43,19 @@ export class BookStoreComponent
     this.changePage(1);
   }
 
+  get pageCount(): number
+  {
+    return Math.ceil(this.repository
+      .getBooks(this.selectedAuthor).length / this.booksPerPage);
+  }
+
+  /*
   get pageNumbers(): number[] //
   {
     return Array(Math.ceil(this.repository
       .getBooks(this.selectedAuthor).length / this.booksPerPage))
       .fill(0).map((x,i) => i + 1);
   }
+  */
 
-  
 }
