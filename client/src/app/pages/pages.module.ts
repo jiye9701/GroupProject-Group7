@@ -6,10 +6,11 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
+import { PartialsModule } from '../partials/partials.module'; // This is important!
 
 
 @NgModule({
-    imports: [BrowserModule, FormsModule],
+    imports: [BrowserModule, FormsModule, PartialsModule], // don't forget to put PartialsModule
     declarations: [ 
         AboutComponent,
         ContactComponent,
@@ -22,7 +23,8 @@ import { ServicesComponent } from './services/services.component';
         ContactComponent,
         HomeComponent,
         ProductsComponent,
-        ServicesComponent
+        ServicesComponent,
+        PartialsModule
     ]
 })
 export class PagesModule {};
