@@ -32,7 +32,12 @@
                         {{ book.price | currency : 'USD' : 'symbol' : '2.2-2' }}
                     </span>
                 </h4>
-                <div class="card-text bg-white p-1 text-dark">{{ book.description  }}</div>
+                <div class="card-text bg-white p-1 text-dark">{{ book.description  }}
+                    <button class="btn btn-success btn-sm float-right"
+                    (click)='addBookToCart(book)'>
+                        Add To Cart
+                    </button>
+                </div>
             </div>
 
             <div class="form-inline float-left mr-1">
