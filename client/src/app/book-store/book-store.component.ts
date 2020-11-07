@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Book } from '../model/book.model'; 
+import { Cart } from '../model/cart.model';
 import { BookRepository } from './../model/book.repository'; 
 
 @Component({
@@ -9,11 +10,12 @@ import { BookRepository } from './../model/book.repository';
 })
 export class BookStoreComponent
 {
-  public selectedAuthor = null; 
+  public selectedAuthor = null;
   public booksPerPage = 3; //
   public selectedPage = 1; //
 
-  constructor(private repository: BookRepository) { } 
+  constructor(private repository: BookRepository,
+              private cart: Cart) { } 
 
   get books(): Book[] 
   {
@@ -49,13 +51,9 @@ export class BookStoreComponent
       .getBooks(this.selectedAuthor).length / this.booksPerPage);
   }
 
-  /*
-  get pageNumbers(): number[] //
+  addBookToCart(book:Book): void
   {
-    return Array(Math.ceil(this.repository
-      .getBooks(this.selectedAuthor).length / this.booksPerPage))
-      .fill(0).map((x,i) => i + 1);
+    this.cart.addLine(book);
   }
-  */
 
 }
