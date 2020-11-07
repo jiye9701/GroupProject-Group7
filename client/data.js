@@ -1,6 +1,6 @@
 module.exports = function () {
   return {
-    books: [
+    "book-list": [
       {
         id: 1,
         name: "Blood Music",
