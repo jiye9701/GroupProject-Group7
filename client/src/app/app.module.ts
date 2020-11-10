@@ -5,9 +5,10 @@ Hankyu Shin – 301090893
 JiHyeok Kim – 301105279 
 Jiye Yu– 301116244
 
-Web app name: K Survey
+Web app name: K Survey 
 brief description : Creating a simple survey site by using Angular
 
+Test
 */
 
 import { BrowserModule } from '@angular/platform-browser';
